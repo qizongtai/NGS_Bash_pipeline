@@ -26,28 +26,28 @@ out[2]="../3_output/AY30_sorted_clean_macs_win${win[$i]}_step${step[$i]}_p0001.t
 #---without background insertions
 #:<<'END'
 python $CCF_TOOLS/call_peaks_macs.py    -e ${exp[$ID]} \
-										-o ${out[$ID]} \
-										-t /scratch/ref/rmlab/calling_card_ref/mouse/TTAA_mm10.ccf \
-										-a /scratch/ref/rmlab/calling_card_ref/mouse/refGene.mm10.Sorted.bed \
-										-pc 0.001 \
-										--peak_finder_pvalue 0.01 \
-										--window ${win[$i]} \
-										--step ${step[$i]} \
-										--pseudocounts 0.2
+					-o ${out[$ID]} \
+					-t /scratch/ref/rmlab/calling_card_ref/mouse/TTAA_mm10.ccf \
+					-a /scratch/ref/rmlab/calling_card_ref/mouse/refGene.mm10.Sorted.bed \
+					-pc 0.001 \
+					--peak_finder_pvalue 0.01 \
+					--window ${win[$i]} \
+					--step ${step[$i]} \
+					--pseudocounts 0.2
 #END
 
 #---with background insertions
 :<<'END'
 python $CCF_TOOLS/call_peaks_macs.py    -e ${exp[$ID]} \
-										-b ${bg[$ID]} \
-										-o ${out[$ID]} \
-										-t /scratch/ref/rmlab/calling_card_ref/mouse/TTAA_mm10.ccf \
-										-a /scratch/ref/rmlab/calling_card_ref/mouse/refGene.mm10.Sorted.bed \
-										-pc 0.001 \
-										--peak_finder_pvalue 0.01 \
-										--window ${win[$i]} \
-										--step ${step[$i]} \
-										--pseudocounts 0.2
+					-b ${bg[$ID]} \
+					-o ${out[$ID]} \
+					-t /scratch/ref/rmlab/calling_card_ref/mouse/TTAA_mm10.ccf \
+					-a /scratch/ref/rmlab/calling_card_ref/mouse/refGene.mm10.Sorted.bed \
+					-pc 0.001 \
+					--peak_finder_pvalue 0.01 \
+					--window ${win[$i]} \
+					--step ${step[$i]} \
+					--pseudocounts 0.2
 END
 
 done
