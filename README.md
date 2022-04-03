@@ -7,5 +7,3 @@ m6A-seq
 [MeRIP-seq 1 .pdf](https://github.com/qizongtai/RIP_seq_pipeline/files/7823679/MeRIP-seq.1.pdf)
 
 
-
-
